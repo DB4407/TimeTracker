@@ -14,7 +14,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Your Summary:"
+            android:text="@string/your_summary"
             android:textSize="24dp"
             android:textColor="@color/white"
 
@@ -27,6 +27,9 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias=".2"
             app:layout_constraintStart_toStartOf="parent"
+            tools:text="thisisthesummary"
+            android:textSize="18sp"
+            android:textColor="@color/white"
 
 
     />
@@ -41,7 +44,7 @@
             android:textColor="@color/white"
             android:textSize="24dp"
             android:layout_margin="8dp"
-            android:text="Click next to see your spike recommendation."
+            android:text="@string/click_next_to_see_your_spike_recommendation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/nextInfo"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"

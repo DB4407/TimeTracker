@@ -1,11 +1,15 @@
 package com.example.timetracker
 
 import android.os.Bundle
+import android.view.*
+import androidx.compose.runtime.State
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.core.view.MenuHost
+import androidx.core.view.MenuProvider
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
+import com.bumptech.glide.manager.Lifecycle
 import com.example.timetracker.databinding.FragmentMainBinding
 
 
@@ -18,9 +22,24 @@ class MainFragment : Fragment() {
     ): View? {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
         val rootView = binding.root
+        binding.startBut.setOnClickListener{
+            rootView.findNavController().navigate(R.id.action_mainFragment_to_questionsFragment)
+        }
 
 
-        // Inflate the layout for this fragment
+    class AboutFragment : Fragment(R.layout.fragment_about){
+        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+            val menuHost: MenuHost = requireActivity()
+            menuHost.addMenuProvider(object: MenuProvider{
+                override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater){
+                    menuInflater.inflate(R.menu.options_menu, menu)
+                }
+                override fun onMenuItemSelected(menuItem: MenuItem): Boolean{
+                    return NavigationUI.onNavDestinationSelected(menuItem, requireView().findNavController())
+                }
+            }, viewLifecycleOwner, androidx.lifecycle.Lifecycle.State.RESUMED)
+        }
+    }
         return rootView
 
     }

@@ -5,12 +5,24 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="questionaire">Questionaire</string>
     <string name="choose_your_distance">Choose your distance</string>
+    <string name="click_next_to_see_your_workout_recommendation">Click next to see your workout recommendation.</string>
+    <string name="next">Next</string>
+    <string name="experienced">Experienced</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="beginner">Beginner</string>
+    <string name="how_experienced_are_you">How experienced are you?</string>
+    <string name="your_summary">Your Summary:</string>
+
+    <string name="click_next_to_see_your_spike_recommendation">Click next to see your spike recommendation.</string>
     <string-array name="events_array">
-        <item>100m</item>
-        <item>200m</item>
-        <item>400m</item>
-        <item>800m</item>
-        <item>1600m</item>
-        <item>3200m</item>
+        <item>100</item>
+        <item>200</item>
+        <item>400</item>
+        <item>800</item>
+        <item>1600</item>
+        <item>3200</item>
     </string-array>
+    <string name="workout100to200m">5x All out 60m Sprints with 30sec rest. 100m Ladder starting at 10m. 2 broken 400m (4x100m and 2x100m, 1x200m) 5-min rest in between each broken 400m.</string>
+    <string name="workout400to800m">4x Broken 400m (2x200m) 5-min rest in between each broken 400m, 3x 500m tempo followed by 3x100m.</string>
+
 </resources>

@@ -9,6 +9,13 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class SpikeViewModel: ViewModel() {
+    var _experience = ""
+    val experience: String
+        get() = _experience
+     private var _distance = MutableLiveData(0)
+    val distance: LiveData<Int>
+        get() = _distance
+
     private val _response = MutableLiveData<List<Spike>>()
     val response: LiveData<List<Spike>>
         get() = _response
@@ -36,5 +43,8 @@ class SpikeViewModel: ViewModel() {
                 _response.value = listOfSpikesFetched
             }
         })
+    }
+    fun updateDistance(d: Int){
+        _distance.value = d
     }
 }

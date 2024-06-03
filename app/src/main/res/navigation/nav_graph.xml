@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/questionsFragment">
+    app:startDestination="@id/mainFragment">
 
     <fragment
         android:id="@+id/mainFragment"
@@ -21,7 +21,11 @@
         android:id="@+id/summary"
         android:name="com.example.timetracker.summary"
         android:label="fragment_summary"
-        tools:layout="@layout/fragment_summary" />
+        tools:layout="@layout/fragment_summary" >
+        <action android:id="@+id/action_summary_to_spikeList" app:destination="@id/spikeList"/>
+        <argument android:name="distance" app:argType="integer"/>
+        <argument android:name="experience" app:argType="string"/>
+    </fragment>
     <fragment
         android:id="@+id/spikeList"
         android:name="com.example.timetracker.SpikeList"
@@ -30,5 +34,9 @@
     <fragment android:id="@+id/questionsFragment" android:name="com.example.timetracker.QuestionsFragment"
               android:label="fragment_questions" tools:layout="@layout/fragment_questions">
         <action android:id="@+id/action_questionsFragment_to_summary" app:destination="@id/summary"/>
+        <argument android:name="distance" app:argType="integer"/>
+        <argument android:name="experience" app:argType="string"/>
     </fragment>
+    <argument android:name="experienceArg" app:argType="string"/>
+    <argument android:name="eventArg" app:argType="string"/>
 </navigation>

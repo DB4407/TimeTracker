@@ -29,31 +29,53 @@
             app:layout_constraintTop_toBottomOf="@+id/title" app:layout_constraintStart_toStartOf="parent"
             android:textColor="#FFFFFF" android:textSize="20sp" android:layout_margin="8dp"/>
     <TextView
-            android:text="How experienced are you?"
+            android:text="@string/how_experienced_are_you"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/experienceTitle"
             app:layout_constraintTop_toBottomOf="@+id/distanceSpinner" app:layout_constraintStart_toStartOf="parent"
             android:textColor="#FFFFFF" android:textSize="20sp" android:layout_margin="8dp"/>
 
-    <RadioButton
-            android:text="RadioButton"
+
+    <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/radioButton2"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/experienceTitle"
-            android:layout_margin="8dp"/>
+            android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/experienceTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            >    <RadioButton
+        android:text="@string/beginner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:id="@+id/beginnerBut"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/experienceTitle"
+        android:layout_margin="8dp"/>
     <RadioButton
-            android:text="RadioButton"
+            android:text="@string/intermediate"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/radioButton3"
+            android:layout_height="wrap_content" android:id="@+id/intermediateBut"
             app:layout_constraintTop_toBottomOf="@+id/experienceTitle"
-            app:layout_constraintEnd_toStartOf="@+id/radioButton4"
-            app:layout_constraintStart_toEndOf="@+id/radioButton2" android:layout_margin="8dp"/>
+            app:layout_constraintEnd_toStartOf="@+id/experiencedBut"
+            app:layout_constraintStart_toEndOf="@+id/beginnerBut" android:layout_margin="8dp"/>
     <RadioButton
-            android:text="RadioButton"
+            android:text="@string/experienced"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/radioButton4"
+            android:layout_height="wrap_content" android:id="@+id/experiencedBut"
             app:layout_constraintTop_toBottomOf="@+id/experienceTitle" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="8dp"/></RadioGroup>
+    <Button
+            android:text="@string/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/next"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:textStyle="bold" android:textSize="20sp"
             android:layout_margin="8dp"/>
+    <TextView
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:layout_margin="8dp"
+            android:text="@string/click_next_to_see_your_workout_recommendation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/nextInfo"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+    />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
