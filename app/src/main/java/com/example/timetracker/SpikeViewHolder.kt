@@ -13,7 +13,7 @@ class SpikeViewHolder(val binding: ListItemBinding) : RecyclerView.ViewHolder(bi
     fun bindSpike(spike: Spike) {
         currentSpike = spike
         binding.spikeName.text = spike.title
-        binding.priceText.text = "$"+spike.price.toString()
+        binding.priceText.text = "$" + spike.price.toString()
         binding.brandName.text = spike.brand
         val imageUrl = currentSpike.image
         val imageUri = imageUrl.toUri().buildUpon().scheme("https").build()
@@ -23,7 +23,6 @@ class SpikeViewHolder(val binding: ListItemBinding) : RecyclerView.ViewHolder(bi
 
 
     }
-
 
 
 }

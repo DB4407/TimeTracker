@@ -1,81 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:tools="http://schemas.android.com/tools"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   tools:context=".QuestionsFragment"
-                                                   android:background="#6750A3"
->
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6750A3"
+    tools:context=".QuestionsFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-            android:textSize="48sp"
-            android:textColor="@color/white"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/questionaire" android:layout_margin="8dp"/>
-    <Spinner android:layout_width="wrap_content" android:layout_height="48dp"
-             android:id="@+id/distanceSpinner"
-             app:layout_constraintStart_toStartOf="parent"
-             app:layout_constraintTop_toBottomOf="@+id/dSpinnerTitle" android:layout_margin="8dp"/>
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/questionaire"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+
+        android:id="@+id/distanceSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dSpinnerTitle" />
+
     <TextView
-            android:text="@string/choose_your_distance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/dSpinnerTitle"
-            app:layout_constraintTop_toBottomOf="@+id/title" app:layout_constraintStart_toStartOf="parent"
-            android:textColor="#FFFFFF" android:textSize="20sp" android:layout_margin="8dp"/>
+        android:id="@+id/dSpinnerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/choose_your_distance"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
     <TextView
-            android:text="@string/how_experienced_are_you"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/experienceTitle"
-            app:layout_constraintTop_toBottomOf="@+id/distanceSpinner" app:layout_constraintStart_toStartOf="parent"
-            android:textColor="#FFFFFF" android:textSize="20sp" android:layout_margin="8dp"/>
+        android:id="@+id/experienceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/how_experienced_are_you"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distanceSpinner" />
 
 
     <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/experienceTitle"
-            app:layout_constraintStart_toStartOf="parent"
-            >    <RadioButton
-        android:text="@string/beginner"
+
+        android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:id="@+id/beginnerBut"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/experienceTitle"
-        android:layout_margin="8dp"/>
-    <RadioButton
-            android:text="@string/intermediate"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/experienceTitle">
+
+        <RadioButton
+            android:id="@+id/beginnerBut"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/intermediateBut"
-            app:layout_constraintTop_toBottomOf="@+id/experienceTitle"
-            app:layout_constraintEnd_toStartOf="@+id/experiencedBut"
-            app:layout_constraintStart_toEndOf="@+id/beginnerBut" android:layout_margin="8dp"/>
-    <RadioButton
-            android:text="@string/experienced"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/experiencedBut"
-            app:layout_constraintTop_toBottomOf="@+id/experienceTitle" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="8dp"/></RadioGroup>
-    <Button
-            android:text="@string/next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/next"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:textStyle="bold" android:textSize="20sp"
-            android:layout_margin="8dp"/>
-    <TextView
-            android:textColor="@color/white"
-            android:textSize="24dp"
+            android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="@string/click_next_to_see_your_workout_recommendation"
+            android:text="@string/beginner"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/experienceTitle" />
+
+        <RadioButton
+            android:id="@+id/intermediateBut"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/nextInfo"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-    />
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/intermediate"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/experiencedBut"
+            app:layout_constraintStart_toEndOf="@+id/beginnerBut"
+            app:layout_constraintTop_toBottomOf="@+id/experienceTitle" />
+
+        <RadioButton
+            android:id="@+id/experiencedBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/experienced"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/experienceTitle" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/next"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/nextInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/click_next_to_see_your_workout_recommendation"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

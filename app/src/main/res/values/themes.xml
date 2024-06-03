@@ -6,4 +6,7 @@
     </style>
 
     <style name="Theme.TimeTracker" parent="Base.Theme.TimeTracker" />
+    <style name="AlertDialogTheme" paret = "Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorSurface">#2107B5</item>
+    </style>
 </resources>

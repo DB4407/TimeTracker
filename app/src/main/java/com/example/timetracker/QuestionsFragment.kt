@@ -26,15 +26,15 @@ class QuestionsFragment : Fragment() {
         val rootView = binding.root
         val beginner: RadioButton = rootView.findViewById(R.id.beginnerBut)
         beginner.setOnClickListener{
-            viewModel._experience = "beginner"
+            experience = "beginner"
         }
         val intermediate: RadioButton = rootView.findViewById(R.id.intermediateBut)
         intermediate.setOnClickListener{
-            viewModel._experience = "intermediate"
+            experience = "intermediate"
         }
         val experienced: RadioButton = rootView.findViewById(R.id.experiencedBut)
         experienced.setOnClickListener{
-            viewModel._experience = "experienced"
+            experience = "experienced"
         }
 
 
@@ -57,9 +57,11 @@ class QuestionsFragment : Fragment() {
             }
         }
         binding.next.setOnClickListener{
+            if(experience != ""){
             val action = QuestionsFragmentDirections.actionQuestionsFragmentToSummary(distance, experience)
 
-            rootView.findNavController().navigate(action)
+            rootView.findNavController().navigate(action)}
+            else Toast.makeText(activity, "Select an experience please", Toast.LENGTH_SHORT ).show()
         }
         return rootView
     }

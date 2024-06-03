@@ -24,5 +24,8 @@
     </string-array>
     <string name="workout100to200m">5x All out 60m Sprints with 30sec rest. 100m Ladder starting at 10m. 2 broken 400m (4x100m and 2x100m, 1x200m) 5-min rest in between each broken 400m.</string>
     <string name="workout400to800m">4x Broken 400m (2x200m) 5-min rest in between each broken 400m, 3x 500m tempo followed by 3x100m.</string>
+    <string name="workout1600mto3200m">4x Mile repeats at 5k pace. 2x800m tempo pace on track. 2 mile cool down run.</string>
+    <string name="about">About:</string>
+    <string name="trackster_s_goal_is_to_provide_young_athletes_with_the_information_they_need_tailored_to_their_event_in_order_to_ensure_success_in_track_trackster_s_data_should_not_be_used_as_a_definite_answer_and_should_only_be_considered_as_a_suggestion">Trackster\'s goal is to provide young athletes with the information they need tailored to their event in order to ensure success in track. Trackster\'s data should not be used as a definite answer and should only be considered as a suggestion.</string>
 
 </resources>

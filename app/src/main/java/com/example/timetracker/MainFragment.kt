@@ -22,24 +22,26 @@ class MainFragment : Fragment() {
     ): View? {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
         val rootView = binding.root
+        val menuHost: MenuHost = requireActivity()
         binding.startBut.setOnClickListener{
             rootView.findNavController().navigate(R.id.action_mainFragment_to_questionsFragment)
         }
 
 
-    class AboutFragment : Fragment(R.layout.fragment_about){
-        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-            val menuHost: MenuHost = requireActivity()
-            menuHost.addMenuProvider(object: MenuProvider{
-                override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater){
-                    menuInflater.inflate(R.menu.options_menu, menu)
-                }
-                override fun onMenuItemSelected(menuItem: MenuItem): Boolean{
-                    return NavigationUI.onNavDestinationSelected(menuItem, requireView().findNavController())
-                }
-            }, viewLifecycleOwner, androidx.lifecycle.Lifecycle.State.RESUMED)
-        }
-    }
+        menuHost.addMenuProvider(object : MenuProvider {
+            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+
+                menuInflater.inflate(R.menu.options_menu, menu)
+            }
+
+            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+                return NavigationUI.onNavDestinationSelected(
+                    menuItem,
+                    requireView().findNavController()
+                )
+            }
+
+        }, viewLifecycleOwner, androidx.lifecycle.Lifecycle.State.RESUMED)
         return rootView
 
     }

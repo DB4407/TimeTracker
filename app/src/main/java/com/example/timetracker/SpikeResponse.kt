@@ -12,10 +12,13 @@ class SpikeResponse {
 class SpikeItems {
     @Json(name = "title")
     var title: String = ""
+
     @Json(name = "brand")
     var brand: String = ""
+
     @Json(name = "base_price")
     var price: Long = 0
+
     @Json(name = "image")
     var image: String = ""
 }

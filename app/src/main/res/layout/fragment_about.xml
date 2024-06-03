@@ -5,13 +5,14 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".about"
-    android:background="#033AFF">
+    android:background="#033AFF"
+    android:id="@+id/aboutFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="About"
+        android:text="@string/about"
         android:textSize="42dp"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +35,6 @@
         android:textSize="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Trackster's goal is to provide young athletes with the information they need tailored to their event in order to ensure success in track. Trackster's data should not be used as a definite answer and should only be considered as a suggestion."/>
+        android:text="@string/trackster_s_goal_is_to_provide_young_athletes_with_the_information_they_need_tailored_to_their_event_in_order_to_ensure_success_in_track_trackster_s_data_should_not_be_used_as_a_definite_answer_and_should_only_be_considered_as_a_suggestion"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
