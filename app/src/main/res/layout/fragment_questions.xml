@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Questions">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   tools:context=".QuestionsFragment"
+                                                   android:background="#6750A3"
+>
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+            android:textSize="48sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/questionaire" android:layout_margin="8dp"/>
+    <Spinner android:layout_width="wrap_content" android:layout_height="48dp"
+             android:id="@+id/distanceSpinner"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/dSpinnerTitle" android:layout_margin="8dp"/>
+    <TextView
+            android:text="@string/choose_your_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/dSpinnerTitle"
+            app:layout_constraintTop_toBottomOf="@+id/title" app:layout_constraintStart_toStartOf="parent"
+            android:textColor="#FFFFFF" android:textSize="20sp" android:layout_margin="8dp"/>
+    <TextView
+            android:text="How experienced are you?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/experienceTitle"
+            app:layout_constraintTop_toBottomOf="@+id/distanceSpinner" app:layout_constraintStart_toStartOf="parent"
+            android:textColor="#FFFFFF" android:textSize="20sp" android:layout_margin="8dp"/>
 
-</FrameLayout>
+    <RadioButton
+            android:text="RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/radioButton2"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/experienceTitle"
+            android:layout_margin="8dp"/>
+    <RadioButton
+            android:text="RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/radioButton3"
+            app:layout_constraintTop_toBottomOf="@+id/experienceTitle"
+            app:layout_constraintEnd_toStartOf="@+id/radioButton4"
+            app:layout_constraintStart_toEndOf="@+id/radioButton2" android:layout_margin="8dp"/>
+    <RadioButton
+            android:text="RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/radioButton4"
+            app:layout_constraintTop_toBottomOf="@+id/experienceTitle" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="8dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

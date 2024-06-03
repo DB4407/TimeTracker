@@ -9,8 +9,8 @@
     <androidx.fragment.app.FragmentContainerView
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:id="@+id/spike_list"
-        android:name="com.example.timetracker.SpikeList"
+        android:id="@+id/questionsFragment"
+        android:name="com.example.timetracker.QuestionsFragment"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
